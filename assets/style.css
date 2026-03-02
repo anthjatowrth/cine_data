@@ -2,7 +2,6 @@
 :root {
   /* Fonds */
   --void: #0f0e1a;
-  --deep: #13122a;
   --surface: #1a1933;
   --card: #1f1e38;
   --card-hover: #26254a;
@@ -10,7 +9,6 @@
 
   /* Accents */
   --gold: #e8a020;
-  --gold-light: #f5c855;
   --violet: #7b68ee;
   --violet-light: #a78bfa;
   --violet-glow: rgba(123, 104, 238, 0.25);
@@ -26,12 +24,10 @@
   /* Gradients */
   --grad-gold: linear-gradient(135deg, #e8a020, #f5c855);
   --grad-violet: linear-gradient(135deg, #7b68ee, #a78bfa);
-  --grad-dark: linear-gradient(180deg, #12112a 0%, #0f0e1a 100%);
 
   /* Ombres */
   --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.45);
   --shadow-glow-violet: 0 0 20px rgba(123, 104, 238, 0.35);
-  --shadow-glow-gold: 0 0 20px rgba(232, 160, 32, 0.35);
 
   /* Rayons */
   --radius-sm: 8px;
@@ -429,49 +425,7 @@ p, li, span {
   border-color: var(--violet) !important;
 }
 
-/* ── 8. BADGES / TAGS ────────────────────────────────────────────────────── */
-.badge {
-  display: inline-flex;
-  align-items: center;
-  padding: 3px 12px;
-  border-radius: 100px;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-.badge-gold {
-  background: rgba(232, 160, 32, 0.15);
-  color: var(--gold);
-  border: 1px solid rgba(232, 160, 32, 0.3);
-}
-
-.badge-violet {
-  background: rgba(123, 104, 238, 0.15);
-  color: var(--violet-light);
-  border: 1px solid rgba(123, 104, 238, 0.3);
-}
-
-.badge-electric {
-  background: rgba(79, 172, 254, 0.12);
-  color: var(--electric);
-  border: 1px solid rgba(79, 172, 254, 0.25);
-}
-
-.badge-danger {
-  background: rgba(192, 57, 43, 0.12);
-  color: #e74c3c;
-  border: 1px solid rgba(192, 57, 43, 0.25);
-}
-
-.badge-success {
-  background: rgba(46, 204, 113, 0.12);
-  color: var(--success);
-  border: 1px solid rgba(46, 204, 113, 0.25);
-}
-
-/* ── 9. BARRES DE PROGRESSION ────────────────────────────────────────────── */
+/* ── 8. BARRES DE PROGRESSION (st.progress) ─────────────────────────────────── */
 .stProgress > div > div > div {
   background: var(--border) !important;
   border-radius: 10px !important;
@@ -484,26 +438,7 @@ p, li, span {
   transition: width 0.4s ease;
 }
 
-.progress-bar-wrap {
-  height: 4px;
-  background: var(--border);
-  border-radius: 10px;
-  overflow: hidden;
-  margin-top: 6px;
-}
-
-.progress-bar-fill {
-  height: 100%;
-  border-radius: 10px;
-  background: var(--grad-gold);
-  transition: width 0.4s ease;
-}
-
-.progress-bar-fill.violet {
-  background: var(--grad-violet);
-}
-
-/* ── 10. MÉTRIQUES (st.metric) ───────────────────────────────────────────── */
+/* ── 9. MÉTRIQUES (st.metric) ────────────────────────────────────────────── */
 [data-testid="stMetric"] {
   background: var(--card) !important;
   border: 1px solid var(--border) !important;
@@ -530,7 +465,7 @@ p, li, span {
   font-size: 0.78rem !important;
 }
 
-/* ── 11. DATAFRAME / TABLE ───────────────────────────────────────────────── */
+/* ── 10. DATAFRAME / TABLE ────────────────────────────────────────────────── */
 [data-testid="stDataFrame"],
 .stDataFrame {
   border: 1px solid var(--border) !important;
@@ -538,7 +473,7 @@ p, li, span {
   overflow: hidden;
 }
 
-/* ── 12. TABS (st.tabs) ──────────────────────────────────────────────────── */
+/* ── 11. TABS (st.tabs) ──────────────────────────────────────────────────── */
 [data-testid="stTabs"] > div:first-child {
   border-bottom: 1px solid var(--border) !important;
   gap: 4px;
@@ -573,7 +508,7 @@ button[data-baseweb="tab"][aria-selected="true"] {
   padding-top: 1.5rem;
 }
 
-/* ── 13. DIVIDERS ────────────────────────────────────────────────────────── */
+/* ── 12. DIVIDERS ─────────────────────────────────────────────────────────── */
 hr {
   border: none !important;
   border-top: 1px solid var(--border) !important;
@@ -587,18 +522,18 @@ hr {
   margin: 1.1rem 0;
 }
 
-/* ── 14. SCROLLBAR ───────────────────────────────────────────────────────── */
+/* ── 13. SCROLLBAR ───────────────────────────────────────────────────────── */
 ::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: var(--void); }
 ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 10px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--violet); }
 
-/* ── 15. SPINNER / LOADING ───────────────────────────────────────────────── */
+/* ── 14. SPINNER / LOADING ────────────────────────────────────────────────── */
 .stSpinner > div {
   border-top-color: var(--violet) !important;
 }
 
-/* ── 16. TOAST / NOTIFICATIONS ───────────────────────────────────────────── */
+/* ── 15. TOAST / NOTIFICATIONS ───────────────────────────────────────────── */
 [data-testid="stToast"] {
   background: var(--card) !important;
   border: 1px solid var(--border) !important;
@@ -607,11 +542,11 @@ hr {
   box-shadow: var(--shadow-card);
 }
 
-/* ── 17. MASQUER ÉLÉMENTS STREAMLIT NATIFS ───────────────────────────────── */
+/* ── 16. MASQUER ÉLÉMENTS STREAMLIT NATIFS ────────────────────────────────── */
 [data-testid="stSidebarNav"] { display: none !important; }
 [data-testid="stCaptionContainer"] { display: none !important; }
 
-/* ── 18. COMPOSANTS CUSTOM ───────────────────────────────────────────────── */
+/* ── 17. COMPOSANTS CUSTOM ────────────────────────────────────────────────── */
 
 /* --- Catalogue : carte film grille --- */
 .card-wrap {
@@ -800,34 +735,16 @@ div[data-testid="column"] > div { gap: 0.35rem; }
   padding: .9rem 1rem;
 }
 
-/* --- Mini-cartes (recommandations sur fiche film) --- */
-.mini-card {
-  border: 1px solid rgba(255,255,255,0.08);
-  background: rgba(255,255,255,0.03);
-  border-radius: 16px;
-  padding: 14px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
-}
-
-.mini-poster,
 .reco-poster {
   width: 100%;
   object-fit: cover;
   display: block;
   margin-bottom: 10px;
   background: rgba(255,255,255,0.04);
+  height: 340px;
+  border-radius: 14px;
 }
 
-.mini-poster { height: 300px; border-radius: 10px; }
-.reco-poster { height: 340px; border-radius: 14px; }
-
-.mini-title {
-  font-size: 0.98rem;
-  line-height: 1.15;
-  margin: 0 0 6px 0;
-}
-
-.mini-meta,
 .reco-meta,
 .sidebar-picked-sub {
   font-size: 0.82rem;
@@ -860,24 +777,6 @@ div[data-testid="column"] > div { gap: 0.35rem; }
 
 .intro-gap { height: 22px; }
 .cat-gap   { height: 28px; }
-
-/* --- Blocs de catégories de recommandations --- */
-.cat-block {
-  padding: 18px;
-  border-radius: 22px;
-  box-shadow: 0 14px 34px rgba(0,0,0,0.40);
-  border: 1px solid rgba(255,255,255,0.18);
-  background: transparent;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  margin-bottom: 28px;
-}
-
-.cat-block.tres { border-left: 10px solid rgba(46, 204, 113, 0.95); }
-.cat-block.pop  { border-left: 10px solid rgba(232, 160, 32, 0.95); }
-.cat-block.peu  { border-left: 10px solid rgba(231, 76, 60, 0.95);  }
-
-.cat-marker { display: none; }
 
 .cat-header {
   display: flex;
@@ -974,6 +873,7 @@ div[data-testid="column"] > div { gap: 0.35rem; }
     gap: 6px;
 }
 
+
 .reco-btn {
   display: flex;
   align-items: center;
@@ -997,169 +897,6 @@ div[data-testid="column"] > div { gap: 0.35rem; }
   color: #ffffff;
   transform: translateY(-1px);
 }
-
-/* --- Hero banner --- */
-.hero-banner {
-  background: linear-gradient(135deg, #1a1835 0%, #2a1850 40%, #101830 100%);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-xl);
-  padding: 2.5rem 3rem;
-  margin-bottom: 2rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-banner::before {
-  content: '';
-  position: absolute;
-  top: -40px; right: -40px;
-  width: 280px; height: 280px;
-  background: radial-gradient(circle, rgba(123, 104, 238, 0.15) 0%, transparent 70%);
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-.hero-eyebrow {
-  font-size: 0.7rem;
-  letter-spacing: 0.3em;
-  color: var(--gold);
-  text-transform: uppercase;
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.hero-eyebrow::before {
-  content: '';
-  display: inline-block;
-  width: 18px; height: 1px;
-  background: var(--gold);
-}
-
-.hero-title {
-  font-family: 'Bebas Neue', 'Impact', sans-serif;
-  font-size: 3.2rem;
-  line-height: 0.95;
-  letter-spacing: 0.04em;
-  color: var(--text-primary);
-  margin-bottom: 12px;
-}
-
-.hero-title .accent {
-  background: linear-gradient(135deg, #7b68ee, #a78bfa);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.hero-desc {
-  color: var(--text-secondary);
-  font-size: 0.92rem;
-  font-style: italic;
-  max-width: 420px;
-}
-
-/* --- Info card --- */
-.info-card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 1.4rem 1.6rem;
-}
-
-.info-card-title {
-  font-family: 'Bebas Neue', 'Impact', sans-serif;
-  font-size: 0.95rem;
-  letter-spacing: 0.12em;
-  color: var(--text-secondary);
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-}
-
-.info-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px 0;
-  border-bottom: 1px solid var(--border);
-  font-size: 0.85rem;
-}
-
-.info-row:last-child { border-bottom: none; }
-.info-label { color: var(--text-muted); }
-.info-value { color: var(--text-primary); }
-.info-value.highlight { color: var(--violet-light); }
-
-/* --- Film card générique --- */
-.film-card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  padding: 1rem;
-  transition: all 0.25s ease;
-  cursor: pointer;
-  height: 100%;
-}
-
-.film-card:hover {
-  border-color: var(--violet);
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-glow-violet);
-}
-
-.film-card-title {
-  font-family: 'Bebas Neue', 'Impact', sans-serif;
-  font-size: 1.05rem;
-  letter-spacing: 0.06em;
-  color: var(--text-primary);
-  margin-bottom: 4px;
-}
-
-.film-card-meta {
-  font-size: 0.72rem;
-  color: var(--text-muted);
-  display: flex;
-  gap: 8px;
-  align-items: center;
-}
-
-.film-card-rating {
-  color: var(--gold);
-  font-weight: 700;
-  font-size: 0.78rem;
-}
-
-/* --- Reco liste (ancienne vue) --- */
-.reco-item {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  padding: 1rem 1.4rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 10px;
-  transition: all 0.2s ease;
-  cursor: pointer;
-}
-
-.reco-item:hover {
-  border-color: var(--violet);
-  background: var(--card-hover);
-  transform: translateX(4px);
-  box-shadow: var(--shadow-glow-violet);
-}
-
-.reco-rank {
-  font-family: 'Bebas Neue', 'Impact', sans-serif;
-  font-size: 1.8rem;
-  color: var(--border);
-  min-width: 28px;
-  letter-spacing: 0.04em;
-}
-
-.reco-rank.top { color: var(--gold); }
 
 /* Fond poster fiche film */
 .bg-poster {
