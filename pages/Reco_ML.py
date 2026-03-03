@@ -20,7 +20,6 @@ load_css()
 
 ASSETS_DIR = Path(__file__).resolve().parent / "assets"
 if not ASSETS_DIR.exists():
-    # fallback courant si le fichier est dans un sous-dossier (ex: src/pages/)
     ASSETS_DIR = Path(__file__).resolve().parents[1] / "assets"
 
 BADGE_FILES = {
