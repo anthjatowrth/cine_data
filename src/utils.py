@@ -208,17 +208,10 @@ def _get_omdb_api_key(provided: str | None = None) -> str | None:
             return str(key)
     except Exception:
         pass
-    # Fallback : variable d'environnement
     return os.getenv("OMDB_API_KEY") or None
 
 
-def _fetch_omdb_poster(
-    imdb_id: str,
-    *,
-    api_key: str,
-    session: requests.Session | None = None,
-    timeout: float = 8.0,
-) -> str | None:
+def _fetch_omdb_poster(imdb_id: str,*, api_key: str, session: requests.Session | None = None, timeout: float = 8.0,) -> str | None:
     if not api_key or not imdb_id:
         return None
     sess = session or requests.Session()
@@ -241,7 +234,7 @@ def _fetch_omdb_poster(
         return None
 
 
-@st.cache_data(show_spinner=False, ttl=86400)  # cache 24h
+@st.cache_data(show_spinner=False, ttl=86400) 
 def _cached_omdb_poster(imdb_id: str, api_key: str) -> str | None:
     """Cache les résultats OMDB pour éviter les appels réseau répétés."""
     return _fetch_omdb_poster(imdb_id, api_key=api_key)
