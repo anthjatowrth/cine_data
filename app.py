@@ -40,7 +40,7 @@ st.markdown("""
     Bienvenue sur CineData
   </div>
   <div style="color:rgba(210,210,235,0.9);font-size:1.15rem;margin-top:0.3rem;letter-spacing:0.04em;">
-    Explore, decouvre et trouve ton prochain chef-d'oeuvre.
+    Explore, découvre et trouve ton prochain chef-d'oeuvre.
   </div>
   <div style="width:120px;height:3px;margin:20px auto 0;
       background:linear-gradient(90deg,transparent,#7b68ee,transparent);
@@ -465,10 +465,6 @@ elif section == "TetraData":
     <div class="td-tool">
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" onerror="this.style.display='none'"/>
       <div class="td-tool-label">VS Code</div>
-    </div>
-    <div class="td-tool">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg" onerror="this.style.display='none'"/>
-      <div class="td-tool-label">Excel</div>
     </div>
     <div class="td-tool">
       <img src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a69f118df70ad7828d4_icon_clyde_blurple_RGB.svg" onerror="this.style.display='none'"/>

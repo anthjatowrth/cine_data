@@ -31,7 +31,6 @@ def _img_to_b64(path: str) -> str:
     return base64.b64encode(Path(path).read_bytes()).decode("utf-8")
 
 def render_sidebar(*, extra: Callable[[], None] | None = None) -> None:
-    # Injection du logo en base64 dans le CSS de la sidebar
     try:
         b64 = _img_to_b64("assets/logo_rotate.png")
         st.markdown(
