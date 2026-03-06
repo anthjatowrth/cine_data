@@ -25,8 +25,7 @@ if not ASSETS_DIR.exists():
 BADGE_FILES = {
     "high": "badge_super_similaire.svg",
     "mid": "badge_un_peu_similaire.svg",
-    "low": "badge_a_decouvrir.svg",
-}
+    "low": "badge_a_decouvrir.svg",}
 
 @st.cache_data(show_spinner=False)
 def svg_to_data_uri(svg_path: str | Path) -> str:
